@@ -110,14 +110,14 @@ var config = {
         }
     },
     devServer: {
-        host: '0.0.0.0',
-        port: 8083,
-        publicPath: '/web',
+        host: '0.0.0.0',  //访问IP
+        port: 8083,		//访问端口
+        publicPath: '/web', //访问路径
         stats: {
             colors: true
         },
         historyApiFallback: false,
-        inline: true,
+        inline: true,  //webpack-dev-server  inline模式 实时自动刷新
         progress: true
     },
     devtool: 'cheap-module-source-map',
