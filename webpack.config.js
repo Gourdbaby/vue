@@ -143,11 +143,11 @@ entries.forEach(function(entry) {
 	console.log("entry====="+JSON.stringify(entry))
     //生成html
     config.plugins.push(new htmlWebpackPlugin({
-        filename: entry.name + '.html',
-        template: entry.path + '/page.html',
-        chunks: ['vendors','common',entry.name],
-        hash: true,
-        minify: {removeComments:true,collapseWhitespace:true}
+        filename: entry.name + '.html',   //生成的html文件名
+        template: entry.path + '/page.html', //模板html文件
+        chunks: ['aaa',entry.name], //当前这个HTML需要引入的 js chunks
+        hash: true, //哈希值
+        minify: {removeComments:true,collapseWhitespace:true} //压缩HTML文件
     }));
 
 });
